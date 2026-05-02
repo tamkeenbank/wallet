@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tamkeen Wallet - Redirecting</title>
+    <script>
+        (function() {
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            var isAndroid = /android/i.test(ua);
+            var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+            // Official Wallet Store Links
+            var androidUrl = "https://play.google.com/store/apps/details?id=com.aamal_tech.tamkeen_wallet";
+            var iosUrl = "https://apps.apple.com/app/id6747835674";
+
+            if (isAndroid) {
+                window.location.replace(androidUrl);
+            } else if (isIOS) {
+                window.location.replace(iosUrl);
+            } else {
+                // Default for Desktop users
+                window.location.replace(iosUrl);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <p style="text-align: center; font-family: sans-serif; margin-top: 50px;">
+        Redirecting to Tamkeen Wallet...
+    </p>
+</body>
+</html>
